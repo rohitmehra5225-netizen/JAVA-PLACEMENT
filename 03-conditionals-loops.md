@@ -229,3 +229,219 @@ Output:
 Enter base: 10
 Enter side: 8
 Perimeter of Parallelogram = 36.0
+Q11.Print all elements of a matrix.
+public class PrintMatrix {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        System.out.println("Matrix Elements:");
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}                                                                                                                                                                                                                                                                OUTPUT : Matrix Elements:
+1 2 3
+4 5 6
+7 8 9                                                                                                           
+Q12:Find the sum of all elements.
+public class MatrixSum {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        int sum = 0;
+
+        for(int i=0;i<matrix.length;i++)
+            for(int j=0;j<matrix[i].length;j++)
+                sum += matrix[i][j];
+
+        System.out.println("Sum = " + sum);
+    }
+}                                                                                                                      
+ OUTPUT: Sum = 45                                                                                
+Q13:Find the largest element.
+ public class LargestElement {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        int max = matrix[0][0];
+
+        for(int i=0;i<matrix.length;i++)
+            for(int j=0;j<matrix[i].length;j++)
+                if(matrix[i][j] > max)
+                    max = matrix[i][j];
+
+        System.out.println("Largest Element = " + max);
+    }
+}                                                                                                                    
+OUTPUT:                                                                                                            
+ Largest Element = 9                                                                               
+Q14:Find the smallest element.
+public class SmallestElement {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        int min = matrix[0][0];
+
+        for(int i=0;i<matrix.length;i++)
+            for(int j=0;j<matrix[i].length;j++)
+                if(matrix[i][j] < min)
+                    min = matrix[i][j];
+
+        System.out.println("Smallest Element = " + min);
+    }
+}                                                                                                                     
+OUTPUT: Smallest Element = 1                                                             
+Q15:Print row-wise sums.
+public class RowWiseSum {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        for(int i=0;i<matrix.length;i++){
+            int sum = 0;
+
+            for(int j=0;j<matrix[i].length;j++)
+                sum += matrix[i][j];
+
+            System.out.println("Row " + (i+1) + " Sum = " + sum);
+        }
+    }
+}                                                                                                                      
+OUTPUT:                                                                                                
+Row 1 Sum = 6
+Row 2 Sum = 15
+Row 3 Sum = 24                                                                                      
+Q16:Print column-wise sums.
+public class ColumnWiseSum {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        for(int j=0;j<matrix[0].length;j++){
+            int sum = 0;
+
+            for(int i=0;i<matrix.length;i++)
+                sum += matrix[i][j];
+
+            System.out.println("Column " + (j+1) + " Sum = " + sum);
+        }
+    }
+}                                                                                                                    
+OUTPUT:                                                                                                   
+ Column 1 Sum = 12
+Column 2 Sum = 15
+Column 3 Sum = 18                                                                                
+Q17:Find the average of all elements.
+ public class MatrixAverage {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        int sum = 0;
+        int count = 0;
+
+        for(int i=0;i<matrix.length;i++)
+            for(int j=0;j<matrix[i].length;j++){
+                sum += matrix[i][j];
+                count++;
+            }
+
+        double average = (double)sum / count;
+
+        System.out.println("Average = " + average);
+    }
+}                                                                                                                   
+OUTPUT:                                                                                                  
+Average = 5.0                                                                                        
+Q18:Count even and odd numbers.
+  public class EvenOddCount {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        int even = 0;
+        int odd = 0;
+
+        for(int i=0;i<matrix.length;i++)
+            for(int j=0;j<matrix[i].length;j++){
+                if(matrix[i][j] % 2 == 0)
+                    even++;
+                else
+                    odd++;
+            }
+
+        System.out.println("Even Count = " + even);
+        System.out.println("Odd Count = " + odd);
+    }
+}                                                                                                                                
+OUTPUT:                                                                                                  
+ Even Count = 4
+Odd Count = 5                                                                                           
+Q19:Print the main diagonal.
+public class MainDiagonal {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        System.out.print("Main Diagonal: ");
+
+        for(int i=0;i<matrix.length;i++)
+            System.out.print(matrix[i][i] + " ");
+    }
+}                                                                                                                 
+   OUTPUT:                                                                                              
+  Main Diagonal: 1 5 9                                                                            
+Q20:Print the secondary diagonal.
+  public class SecondaryDiagonal {
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        int n = matrix.length;
+
+        System.out.print("Secondary Diagonal: ");
+
+        for(int i=0;i<n;i++)
+            System.out.print(matrix[i][n-1-i] + " ");
+    }
+}                                                                                                                         
+ OUTPUT:                                                                                                    
+ Secondary Diagonal: 3 5 7
