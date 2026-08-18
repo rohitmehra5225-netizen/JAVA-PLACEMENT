@@ -1,0 +1,39 @@
+void insertAtPosition(int data, int position) {
+    Node newNode = new Node(data);
+
+    // Insert at beginning
+    if (position == 1) {
+        newNode.next = head;
+
+        if (head != null) {
+            head.prev = newNode;
+        }
+
+        head = newNode;
+        return;
+    }
+
+    Node temp = head;
+
+    // Move to the node before the required position
+    for (int i = 1; i < position - 1 && temp != null; i++) {
+        temp = temp.next;
+    }
+
+    if (temp == null) {
+        System.out.println("Invalid position");
+        return;
+    }
+
+    // Insert new node
+    newNode.next = temp.next;
+    newNode.prev = temp;
+
+    if (temp.next != null) {
+        temp.next.prev = newNode;
+    }
+
+    temp.next = newNode;
+}
+output:
+10 20 25 30 40
